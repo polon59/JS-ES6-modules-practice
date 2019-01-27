@@ -1,6 +1,12 @@
 export class Calculator {
 
-    calculateSumOfGivenNumbers(a,b){
-        return a+b;
+    calculateSumOfGivenNumbers(numbers){
+        let sum = 0;
+
+        numbers.forEach(number => {
+            sum+=number;
+        });
+        
+        return sum;
     }
   }
