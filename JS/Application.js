@@ -6,14 +6,10 @@ import {Controller} from "/JS/Controller/Controller.js";
 export class Application{
 
     constructor(){
-        this.controller = new Controller();
+        this.controller = new Controller(this);
         this.view = new View();
         this.calculator = new Calculator();
-        this.initializeEventListeners();
-    }
-
-    initializeEventListeners(){
-        $("#calculateButton").on("click",this.handleApp());
+        this.controller.initializeEventListeners();
     }
 
     handleApp(){
