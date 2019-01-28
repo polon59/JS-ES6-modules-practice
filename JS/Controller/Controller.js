@@ -5,7 +5,8 @@ export class Controller{
     }
 
     initializeEventListeners(){
-        $("#calculateButton").on("click",this.app.handleApp());
+        let application = this.app;
+        document.getElementById("calculateButton").addEventListener('click', function(){application.handleApp()});
     }
 
     provideDataForCalculation(){
